@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .options {
+            margin-left: 20px;
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+        }
+body {
+    background: linear-gradient(265deg, #d58516, #daff11);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+    </style>
+</head>
+<body>
+    <h1>Quiz</h1>
+
+    <form id="quiz-form">
+        <div class="question">
+            <p>1. Which Sustainable Development Goal focuses on ensuring inclusive and equitable quality education for all?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question1" value="a"> a) Goal 4
+                </label><br>
+                <label>
+                    <input type="radio" name="question1" value="b"> b) Goal 9
+                </label><br>
+                <label>
+                    <input type="radio" name="question1" value="c"> c) Goal 16
+                </label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Goal 9 aims to promote which of the following?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question2" value="a"> a) Gender equality
+                </label><br>
+                <label>
+                    <input type="radio" name="question2" value="b"> b) Renewable energy
+                </label><br>
+                <label>
+                    <input type="radio" name="question2" value="c"> c) affordable education
+                </label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Which organization focuses on supporting girls' education in sub-Saharan Africa and tackles poverty and inequality?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question3" value="a"> a) Camfed
+                </label><br>
+                <label>
+                    <input type="radio" name="question3" value="b"> b) UNESCO
+                </label><br>
+                <label>
+                    <input type="radio" name="question3" value="c"> c) UNICEF
+                </label><br>
+            </div>
+        </div>
+
+        <button class="submit-btn" type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <script>
+        function submitQuiz() {
+            var form = document.getElementById("quiz-form");
+            var score = 0;
+
+            // Check the answers
+            if (form.question1.value === "a") {
+                score++;
+            }
+            if (form.question2.value === "b") {
+                score++;
+            }
+            if (form.question3.value === "a") {
+                score++;
+            }
+
+            alert("Your score: " + score + "/3");
+        }
+    </script>
+<div style="background-color: orange;">
+<h2>Facts
+    </h2>
+    <p id="fact">Click the button for facts</p>
+    <button type="button" onclick="factclick()">Change</button>
+    <button type="button" onclick="back()">Back to home</button>"
+    <script>
+       
+
+       
+        function factclick() {
+            num = Math.floor(Math.random() * 10) + 1; 
+            console.log("The random number is: " + num);
+            if (num == 1){
+                document.getElementById("fact").innerHTML = "The Sustainable Development Goals are the blueprint to achieve a better and more sustainable future for all. They address the global challenges we face, including those related to poverty, inequality, climate change, environmental degradation, peace and justice. The 17 Goals are all interconnected, and in order to leave no one behind, it is important that we achieve them all by 2030.";
+                return
+            } else if (num == 2){
+                document.getElementById("fact").innerHTML = "Finland is consistently recognized for having one of the best education systems in the world. It places a strong emphasis on equal opportunities, student well-being, and highly qualified teachers.";
+                return
+            } else if (num == 3){
+                document.getElementById("fact").innerHTML = "The pencil, a simple writing instrument, has played a significant role in education for centuries. It is estimated that the average pencil can write approximately 45,000 words or draw a line 35 miles long.";
+                return
+            } else if (num == 4){
+                document.getElementById("fact").innerHTML = "LEGO, the popular toy company, is one of the world's largest manufacturers of tires. They produce more than 318 million tires annually, contributing to sustainable infrastructure for toy vehicles and encouraging creativity and play.";
+                return
+            } else if (num == 5){
+                document.getElementById("fact").innerHTML = "The United Nations estimates that there is a global teacher shortage of around 69 million teachers. Addressing this shortage is crucial to achieving Goal 4 and ensuring quality education for all.";
+                return
+            } else if (num == 6){
+                document.getElementById("fact").innerHTML = "The Sustainable Development Goal 9 encourages the development of sustainable and resilient infrastructure. One example of this is the construction of 'green buildings' that incorporate energy-efficient features, renewable energy sources, and sustainable materials to minimize environmental impact.";
+                return
+            } else if (num == 7){
+                document.getElementById("fact").innerHTML = "The African Innovation Foundation (AIF) hosts the Innovation Prize for Africa (IPA), an annual competition that awards innovators across the continent for their groundbreaking solutions in various sectors, contributing to Goal 9's emphasis on fostering innovation.";
+                return
+            } else if (num == 8){
+                document.getElementById("fact").innerHTML = "The world's largest solar power plant, the Bhadla Solar Park in India, covers an area of 10,000 acres and has a capacity of 2,250 megawatts. It contributes to Goal 9's focus on renewable energy and sustainable infrastructure.";
+                return
+            } else if (num == 9){
+                document.getElementById("fact").innerHTML = "The One Laptop per Child (OLPC) initiative aimed to provide affordable laptops to children in developing countries, promoting access to quality education. The laptops were designed to be rugged, low-power, and able to operate in areas with limited infrastructure, supporting Goal 4's objective of inclusive and equitable education.";
+                return
+            } else if (num == 10){
+                document.getElementById("fact").innerHTML = "The Global Innovation Index (GII) considers creative outputs such as music, films, and software in its assessment of innovation. This recognition of creative industries as drivers of innovation and economic growth aligns with Goal 9's emphasis on fostering inclusive and sustainable industrialization.";
+                return
+                
+            } else{
+                factclick();
+                return
+            }
+        }
+        function back(){
+            window.location.href = "test.html";
+        }
+    </script>
+</div>
+</body>
+</html>

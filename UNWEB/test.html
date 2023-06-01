@@ -1,0 +1,323 @@
+<!--UN SDGS Information Website-->
+<!--Johnathan Lee-->
+<!--May 31, 2023-->
+<!--HTML, CSS and Javascript based-->
+<!--This website is designed to inform people about the UN SDGS and how they are being met in Canada-->
+
+<!DOCTYPE html>
+<link rel="icon" type="image/x-icon" href="icons8-globe.gif"> <!---icon-->
+<title>UN SDGS</title> <!---title-->
+<video autoplay playsinline muted loop preload id="myVideo"> <!---backgroud video-->
+    
+    <source src="backvid.mp4" /> 
+  </video>
+<html lang="en-US" style="background-color: powderblue">
+  <nav>  <!--- all below is contained in nav bar -->
+    <select id="dropdown" onchange="changeText()"> <!---dropdown menu -->
+      <option value="option1">Goal 4/ Goal 9 Comparision</option>
+      <option value="option2">Quality Education</option>
+      <option value="option3">Innovation, Industry and Infrastructure</option>
+      <option value="option4">Quiz</option>
+    </select>
+    <div id="google_translate_element"></div> <!---google translate element  requires its own script-->
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
+  </div>
+
+  </script>
+  </nav>
+<head>
+  <h1 id="text" style="font-size:180px; text-align: center; background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(147,21,232,1) 4%, rgba(0,212,255,1) 65%); "> <!---title first header under video -->
+UN SDGS Information Website
+<div class="flip"
+onclick="this.classList.toggle('hover');"> <!---flip animation -->
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="ucc.jpg_large" alt="" style="max-width: 40%; height: auto; width: auto;"> <!---image -->
+    </div>
+    <div class="flip-back">
+      <img src="intro.png" alt="" style="max-width: 60%; height: auto; width: auto;"> <!---image -->
+    </div>
+  </h1> <!---style for flip animation -->
+  <style>
+    .flip {
+      background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(147,21,232,1) 4%, rgba(0,212,255,1) 65%);;
+      width: 500px;
+      height: 300px;
+      border: 1px solid #f1f1f1;
+      perspective: 1000px;
+    }
+    .flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    .flip:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-front, .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    .flip-front {
+      background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(147,21,232,1) 4%, rgba(0,212,255,1) 65%);;
+      color: black;
+    }
+    .flip-back {
+      background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(147,21,232,1) 4%, rgba(0,212,255,1) 65%);;
+      color: white;
+      transform: rotateY(180deg);
+    }
+    
+    
+    #text{
+      position:relative;
+      top: 50%;
+
+    }
+
+    #myVideo {
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      background-image: linear-gradient(to right, lightblue, yellow);
+
+    }
+
+    .box {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .carousel-container {
+      width: auto;
+      height: auto;
+      
+      overflow: hidden;
+      position: relative;
+     align-self: center;
+     margin : auto auto;
+     
+    }
+    
+    .carousel-image {
+      width: auto;
+      height: auto;
+      position: absolute;
+      transition: opacity 0.5s;
+      margin: auto auto;
+    }
+    
+    .carousel-image.hide {
+      opacity: 0;
+    }
+    nav { /*-nav bar style for gradient */
+     
+    background: linear-gradient(296deg, #e21836, #f68e1f, #ec008b, #00adef, #07bbc1, #006eb6, #87c440, #40ae49, #ffe800);
+    background-size: 1800% 1800%;
+
+    -webkit-animation: AnimationName 39s ease infinite;
+    -moz-animation: AnimationName 39s ease infinite;
+    animation: AnimationName 39s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 43%}
+    50%{background-position:100% 58%}
+    100%{background-position:0% 43%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 43%}
+    50%{background-position:100% 58%}
+    100%{background-position:0% 43%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 43%}
+    50%{background-position:100% 58%}
+    100%{background-position:0% 43%}
+}
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class="container"> <!---container for the two boxes -->
+    <div class="box">
+      <!-- Content for the first box -->
+      <h2 id="info1t">Use the dropdown to change information</h2>
+      <p id="info1"></p>
+      <img src="unlogo.png" alt="" id="image1" style="max-width: 40%; height: auto; width: auto;">
+    </div>
+    <div class="box">
+      <!-- Content for the second box -->
+      <h2 id ="info2t">Use the dropdown the change information</h2>
+      <p id="info2"></p>
+      <img src="download.png" alt="" id="image2" style="max-width: 40%;" class ="scaler"> 
+        
+      </div>
+    </div>
+    
+  </div>
+  <div class="carousel-container"> <!---carousel container for images-->
+    <img class="carousel-image" src="unlogo.png" alt="Image 1">
+    <img class="carousel-image hide" src="download.png" alt="Image 2">
+    <img class="carousel-image hide" src="download (1).png" alt="Image 3">
+    <img class="carousel-image hide" src="goal9.png" alt="Image 4">
+</body>
+<script>
+
+    var images = document.querySelectorAll('.carousel-image');
+    var currentIndex = 0;
+    var interval = setInterval(changeImage, 2000); // Change image every 2 seconds
+
+    function changeImage() {
+      images[currentIndex].classList.add('hide');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.remove('hide');
+    }
+    function changeText() {
+      var dropdown = document.getElementById("dropdown"); // asssign variables to all changed aspects
+      var selectedOption = dropdown.options[dropdown.selectedIndex].value;
+      var textElement = document.getElementById("text");
+      var textElement1 = document.getElementById("info1");
+      var textElement2 = document.getElementById("info1t");
+      var textElement3 = document.getElementById("info2");
+      var textElement4 = document.getElementById("info2t");
+      var textElement5 = document.getElementById("image1");
+      var textElement6 = document.getElementById("image2");
+      var textElement7 = document.getElementById("flip");
+
+
+      // Update the text based on the selected option
+      if (selectedOption === "option1") { //if UN SDGS is selected
+        textElement.innerHTML = "UN SDGS";
+        textElement1.innerHTML = "The United Nations Sustainable Development Goals (SDGs), also known as the Global Goals, are a set of 17 interconnected goals adopted by UN member states in 2015. These goals aim to address various social, economic, and environmental challenges and create a more sustainable future for all. The SDGs cover a wide range of issues and are intended to be achieved by 2030.";
+        textElement2.innerHTML = "What are the SDGs?";
+        textElement3.innerHTML = "Goal 9, 'Industry, Innovation, and Infrastructure,' and Goal 4, 'Quality Education,' are two interconnected Sustainable Development Goals that can work together to foster inclusive and sustainable development. By investing in infrastructure development and promoting sustainable industrial practices (Goal 9), countries can create an enabling environment for quality education (Goal 4). Access to reliable infrastructure, such as electricity and transportation, enhances educational opportunities by providing better access to schools and resources. Furthermore, sustainable industrialization generates employment opportunities, contributing to economic growth and funding for educational initiatives. Conversely, quality education equips individuals with the skills, knowledge, and creativity necessary for innovation, technological advancements, and sustainable industrial practices (Goal 9). Education promotes a skilled workforce that drives research and development, leading to innovative solutions for sustainable infrastructure and industrial processes. By aligning these goals, societies can create a virtuous cycle: improved infrastructure supports quality education, and educated individuals foster innovation and sustainable industrial practices. Ultimately, this collaboration facilitates economic growth, social development, and environmental sustainability, contributing to the overall well-being of communities and the achievement of the broader Sustainable Development Goals.";
+        textElement4.innerHTML = "Comparision of goal 4 and 9";
+        textElement5.src = "image1.jpg";
+        textElement6.src = "image2.jpg";
+        textElement7.src = "unlogo.png";
+
+      } else if (selectedOption === "option2") { //if Quality Education selected
+        textElement.innerHTML = "Quality Education";
+        textElement1.innerHTML = "Goal 4, 'Quality Education,'' is one of the United Nations Sustainable Development Goals (SDGs). It aims to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. Goal 4 recognizes that education is a fundamental right and a powerful driver of individual empowerment, economic growth, and social development. It calls for ensuring that all girls and boys have access to free, equitable, and quality primary and secondary education. Additionally, Goal 4 emphasizes the importance of promoting relevant skills for employment, lifelong learning opportunities for all, gender equality in education, and improving education infrastructure and resources. By achieving Goal 4, societies can equip individuals with the knowledge, skills, and values needed to lead fulfilling lives and contribute positively to their communities and the world at large. Education is not only a goal in itself but also a crucial enabler for achieving all other SDGs.";
+
+
+        textElement2.innerHTML = "Goals";
+        textElement3.innerHTML = "In Canada, several organizations are dedicated to promoting and ensuring quality education for all. One such organization is the Canadian Education Association (CEA), which conducts research, develops policies, and provides professional learning opportunities to enhance the quality and effectiveness of education in Canada. Another prominent organization is the Learning Partnership, which fosters partnerships between government, educators, and the business community to advance public education through innovative programs and initiatives. Indspire focuses on supporting Indigenous education in Canada by providing scholarships, bursaries, and resources to Indigenous students at all levels. These organizations, along with others like Right To Play, Canadian Teachers' Federation (CTF), and Pathways to Education, are instrumental in advocating for inclusive and equitable education, supporting teachers and students, and promoting lifelong learning opportunities throughout Canada.";
+        textElement4.innerHTML = "Ways to help and how the goal is being met";
+        textElement5.src = "sdg4.png";
+        textElement6.src = "SDG Report 2022_Goal 4 infographic.png";
+      } else if (selectedOption === "option3") { //if Innovation, Industry and Infrastructure selected
+        
+        textElement.innerHTML = "Innovation, Industry and Infrastructure";
+        textElement1.innerHTML = "Goal 9, 'Industry, Innovation, and Infrastructure,' is one of the United Nations Sustainable Development Goals (SDGs). It aims to build resilient infrastructure, promote inclusive and sustainable industrialization, and foster innovation. By focusing on these areas, Goal 9 contributes to economic growth, job creation, and sustainable development. It recognizes the importance of investing in infrastructure, supporting industrial diversification and upgrading, fostering innovation and technological progress, promoting sustainable practices, and ensuring access to reliable and affordable infrastructure and services for all. Achieving Goal 9 is essential for creating the necessary foundations to support sustainable development across all sectors and achieve the broader SDGs.";
+        textElement2.innerHTML = "Goal";
+        textElement3.innerHTML = "In Canada, several organizations are committed to supporting Goal 9, which aims to build resilient infrastructure, promote sustainable industrialization, and foster innovation. The Canadian Construction Association (CCA) plays a significant role in advancing infrastructure development by promoting best practices, providing training and certification programs, and advocating for sustainable and resilient construction projects. The National Research Council (NRC) focuses on fostering innovation and technological advancements by conducting research and development, collaborating with industry partners, and providing support for technology commercialization. The Information Technology Association of Canada (ITAC) promotes the growth of Canada's information and communication technology (ICT) sector, advocating for policies that foster innovation, skills development, and digital transformation. Other organizations like Engineers Without Borders Canada, Sustainable Development Technology Canada (SDTC), and MaRS Discovery District work towards sustainable infrastructure, innovation, and fostering entrepreneurship in Canada. Together, these organizations contribute to achieving Goal 9 by supporting the development of resilient infrastructure, encouraging sustainable industrial practices, and fostering innovation and technological advancements across various sectors of the Canadian economy.";
+        textElement4.innerHTML = "Ways to help";
+        textElement5.src = " sdg9.png";
+        textElement6.src = " SDG Report 2022_Goal 9 infographic.png";
+      
+      } else if (selectedOption === "option4") { //if Quiz selected
+        window.location = "quiz.html"; // take to second page
+        textElement.innerHTML = "Quiz";
+        textElement1.innerHTML = "";
+        textElement2.innerHTML = "";
+        textElement3.innerHTML = "";
+        textElement4.innerHTML = "";
+        textElement5.src = "";
+        textElement6.src = "";
+
+      }
+    }
+  </script>
+
+<footer>
+  <br> <!---Don't worry about this I couldn't fidure out a good solution but hey it works -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3> Learn more about these goals and others here at the official website, You can learn how to help here or look at the other organizations</h3>
+  <a href="https://sdgs.un.org/goals"> <!---link to official website -->
+    <img src="unsdg2.png" alt=""> <!---place holder image -->
+  </a>
+    <p> Website by Johnathan Lee. Information generated by OpenAI's Chat GPT and Johnathan Lee. 2023
+
+    </p>
+</footer>
+</html>
